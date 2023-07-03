@@ -23,7 +23,7 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 NOTE : This will start the server at http://localhost:5000/api/ for rest api and you can access it
-from browser at http://localhost:5000/docs(for rest swagger doc).
+from browser at http://localhost:5000/docs (for rest swagger doc).
 
 ## Feature
 =============================
