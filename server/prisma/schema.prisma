@@ -27,3 +27,4 @@ model User {
 // npx prisma generate
 // npx prisma format
 // npx prisma migrate dev --name "init"
+// npx nest generate resource modle_name

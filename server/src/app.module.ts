@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { StripeModule } from 'nestjs-stripe';
 import { PrismaModule } from './prisma/prisma.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { PrismaModule } from './prisma/prisma.module';
       apiVersion: '2022-11-15',
     }),
     PrismaModule,
+    UsersModule,
   ],
   controllers: [],
   providers: [],
