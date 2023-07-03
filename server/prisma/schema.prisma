@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         Int      @id @default(autoincrement())
+  email      String   @unique
+  name       String
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now())
+}
+
+
+
+
+// npx prisma studio;
+// npx prisma db seed
+// npx prisma db push --force-reset
+// npx prisma generate
+// npx prisma format
+// npx prisma migrate dev --name "init"
