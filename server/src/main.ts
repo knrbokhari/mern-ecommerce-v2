@@ -1,8 +1,22 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
+import { ValidationPipe } from '@nestjs/common';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-  await app.listen(5000);
+  const app = await NestFactory.create(AppModule, { cors: true });
+  app.setGlobalPrefix('api');
+  app.useGlobalPipes(new ValidationPipe());
+  const config = new DocumentBuilder()
+    .setTitle('Ecommerce')
+    .setDescription('Ecommerce V2 API')
+    .setVersion('1.0')
+    .addTag('ecommerce')
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('docs', app, document);
+  const PORT = process.env.PORT || 5000;
+  await app.listen(PORT);
+  console.log(`Application is running on: ${await app.getUrl()}/api`);
 }
 bootstrap();
