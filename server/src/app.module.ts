@@ -1,10 +1,20 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { ConfigModule } from '@nestjs/config';
+import { StripeModule } from 'nestjs-stripe';
+import { PrismaModule } from './prisma/prisma.module';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+    StripeModule.forRoot({
+      apiKey: process.env.STRIPE_API_KEY,
+      apiVersion: '2022-11-15',
+    }),
+    PrismaModule,
+  ],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
