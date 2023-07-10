@@ -5,6 +5,7 @@ import { PrismaModule } from './prisma/prisma.module';
 import { UsersModule } from './users/users.module';
 import { SettingsModule } from './settings/settings.module';
 import { TypesModule } from './types/types.module';
+import { CategoriesModule } from './categories/categories.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { TypesModule } from './types/types.module';
     UsersModule,
     SettingsModule,
     TypesModule,
+    CategoriesModule,
   ],
   controllers: [],
   providers: [],
