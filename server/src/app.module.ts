@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { StripeModule } from 'nestjs-stripe';
 import { PrismaModule } from './prisma/prisma.module';
 import { UsersModule } from './users/users.module';
+import { SettingsModule } from './settings/settings.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { UsersModule } from './users/users.module';
     }),
     PrismaModule,
     UsersModule,
+    SettingsModule,
   ],
   controllers: [],
   providers: [],
