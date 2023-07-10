@@ -9,6 +9,7 @@ import { CategoriesModule } from './categories/categories.module';
 import { AttributesModule } from './attributes/attributes.module';
 import { TagsModule } from './tags/tags.module';
 import { AuthorsModule } from './authors/authors.module';
+import { ShopsModule } from './shops/shops.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { AuthorsModule } from './authors/authors.module';
     AttributesModule,
     TagsModule,
     AuthorsModule,
+    ShopsModule,
   ],
   controllers: [],
   providers: [],
