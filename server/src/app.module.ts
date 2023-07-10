@@ -10,6 +10,7 @@ import { AttributesModule } from './attributes/attributes.module';
 import { TagsModule } from './tags/tags.module';
 import { AuthorsModule } from './authors/authors.module';
 import { ShopsModule } from './shops/shops.module';
+import { ProductsModule } from './products/products.module';
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { ShopsModule } from './shops/shops.module';
     TagsModule,
     AuthorsModule,
     ShopsModule,
+    ProductsModule,
   ],
   controllers: [],
   providers: [],
