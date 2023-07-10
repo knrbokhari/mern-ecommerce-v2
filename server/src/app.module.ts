@@ -6,6 +6,7 @@ import { UsersModule } from './users/users.module';
 import { SettingsModule } from './settings/settings.module';
 import { TypesModule } from './types/types.module';
 import { CategoriesModule } from './categories/categories.module';
+import { AttributesModule } from './attributes/attributes.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { CategoriesModule } from './categories/categories.module';
     SettingsModule,
     TypesModule,
     CategoriesModule,
+    AttributesModule,
   ],
   controllers: [],
   providers: [],
